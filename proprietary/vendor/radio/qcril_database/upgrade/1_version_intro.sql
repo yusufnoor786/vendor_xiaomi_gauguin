@@ -8,6 +8,7 @@ BEGIN TRANSACTION;
 
 CREATE TABLE IF NOT EXISTS qcril_properties_table (property TEXT,value TEXT, PRIMARY KEY(property));
 INSERT OR REPLACE INTO qcril_properties_table (property, value) VALUES ('qcrildb_version', 1);
+INSERT OR REPLACE INTO qcril_properties_table (property, value) VALUES ("all_bc_msg", "all");
 
 DELETE FROM qcril_emergency_source_mcc_table where MCC = '234' AND NUMBER = '999';
 INSERT INTO qcril_emergency_source_mcc_table VALUES('234','999','','');

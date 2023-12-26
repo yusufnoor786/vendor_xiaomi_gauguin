@@ -8,7 +8,9 @@
 PRAGMA foreign_keys=OFF;
 BEGIN TRANSACTION;
 CREATE TABLE qcril_emergency_source_mcc_table(MCC TEXT, NUMBER TEXT, IMS_ADDRESS TEXT, SERVICE TEXT, PRIMARY KEY(MCC,NUMBER));
-INSERT INTO qcril_emergency_source_mcc_table VALUES('334','060','','');
+/*[BUGIFX]-DELETE-BEGIN by TCTNB(wenwen.cao), defect-9656513, 2020/07/22*/
+/*INSERT INTO qcril_emergency_source_mcc_table VALUES('334','060','','');*/
+/*[BUGIFX]-DELETE-END by TCTNB(zhonglian.li), defect-9656513, 2020/07/22*/
 INSERT INTO qcril_emergency_source_mcc_table VALUES('730','133','','');
 INSERT INTO qcril_emergency_source_mcc_table VALUES('732','123','','');
 INSERT INTO qcril_emergency_source_mcc_table VALUES('901','999','','');
@@ -21,15 +23,15 @@ INSERT INTO qcril_emergency_source_mcc_table VALUES('520','911','','limited');
 INSERT INTO qcril_emergency_source_mcc_table VALUES('414','191','','limited');
 INSERT INTO qcril_emergency_source_mcc_table VALUES('414','192','','limited');
 INSERT INTO qcril_emergency_source_mcc_table VALUES('414','199','','limited');
-INSERT INTO qcril_emergency_source_mcc_table VALUES('515','117','','limited');
-INSERT INTO qcril_emergency_source_mcc_table VALUES('515','112','','limited');
-INSERT INTO qcril_emergency_source_mcc_table VALUES('515','911','','limited');
-INSERT INTO qcril_emergency_source_mcc_table VALUES('460','110','','');
-INSERT INTO qcril_emergency_source_mcc_table VALUES('460','119','','');
-INSERT INTO qcril_emergency_source_mcc_table VALUES('460','120','','');
+/*[BUGIFX]-Begin by TCTNB(dongxu.qin), defect-10699372 , 2021/02/02*/
+INSERT INTO qcril_emergency_source_mcc_table VALUES('515','117','','');
+INSERT INTO qcril_emergency_source_mcc_table VALUES('515','112','','');
+INSERT INTO qcril_emergency_source_mcc_table VALUES('515','911','','');
+/*[BUGIFX]-End by TCTNB(dongxu.qin), defect-10699372 , 2021/02/02*/
+/*[BUGIFX]-Delete-Begin  by dongxu.qin NBTelCode for 10680489  on 2021/02/03*/
+INSERT INTO qcril_emergency_source_mcc_table VALUES('460','911','','');
 INSERT INTO qcril_emergency_source_mcc_table VALUES('460','112','','');
-INSERT INTO qcril_emergency_source_mcc_table VALUES('460','999','','');
-INSERT INTO qcril_emergency_source_mcc_table VALUES('460','122','','');
+/*[BUGIFX]-Delete-end  by dongxu.qin NBTelCode for 10680489  on 2021/02/03*/
 INSERT INTO qcril_emergency_source_mcc_table VALUES('852','999','','');
 INSERT INTO qcril_emergency_source_mcc_table VALUES('510','110','','');
 INSERT INTO qcril_emergency_source_mcc_table VALUES('510','118','','');
@@ -72,13 +74,11 @@ INSERT INTO qcril_emergency_source_mcc_table VALUES('470','112',NULL,NULL);
 INSERT INTO qcril_emergency_source_mcc_table VALUES('234','999','','');
 INSERT INTO qcril_emergency_source_mcc_table VALUES('505','000','','');
 CREATE TABLE qcril_emergency_source_voice_table(MCC TEXT, NUMBER TEXT, IMS_ADDRESS TEXT, SERVICE TEXT, PRIMARY KEY(MCC,NUMBER));
-INSERT INTO qcril_emergency_source_voice_table VALUES('460','110','','full');
-INSERT INTO qcril_emergency_source_voice_table VALUES('460','119','','full');
-INSERT INTO qcril_emergency_source_voice_table VALUES('460','120','','full');
+/*[BUGIFX]-Delete-Begin  by dongxu.qin NBTelCode for 10680489  on 2021/02/03*/
+INSERT INTO qcril_emergency_source_voice_table VALUES('460','911','','full');
 INSERT INTO qcril_emergency_source_voice_table VALUES('460','112','','full');
-INSERT INTO qcril_emergency_source_voice_table VALUES('460','999','','full');
+/*[BUGIFX]-Delete-end  by dongxu.qin NBTelCode for 10680489  on 2021/02/03*/
 INSERT INTO qcril_emergency_source_voice_table VALUES('852','999','','full');
-INSERT INTO qcril_emergency_source_voice_table VALUES('460','122','','full');
 INSERT INTO qcril_emergency_source_voice_table VALUES('520','191','','full');
 INSERT INTO qcril_emergency_source_voice_table VALUES('520','1669','','full');
 INSERT INTO qcril_emergency_source_voice_table VALUES('520','199','','full');
@@ -105,13 +105,12 @@ INSERT INTO qcril_emergency_source_voice_table VALUES('502','991','','full');
 INSERT INTO qcril_emergency_source_voice_table VALUES('502','994','','full');
 INSERT INTO qcril_emergency_source_voice_table VALUES('502','999','','full');
 CREATE TABLE qcril_emergency_source_hard_mcc_table(MCC TEXT, NUMBER TEXT, IMS_ADDRESS TEXT, SERVICE TEXT, PRIMARY KEY(MCC,NUMBER));
-INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('460','110','','');
-INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('460','119','','');
-INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('460','120','','');
+/*[BUGIFX]-Delete-Begin  by dongxu.qin NBTelCode for 10680489  on 2021/02/03*/
+INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('460','911','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('460','112','','');
-INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('460','999','','');
+/*[BUGIFX]-Delete-end  by dongxu.qin NBTelCode for 10680489  on 2021/02/03*/
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('852','999','','');
-INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('460','122','','');
+
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('520','191','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('520','1669','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('520','199','','');
@@ -142,7 +141,7 @@ INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('310','911','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('310','999','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('302','112','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('302','911','','');
-INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('302','999','','');
+
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('456','191','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('456','192','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('456','199','','');
@@ -166,10 +165,12 @@ INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('234','112','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('234','911','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('222','112','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('222','911','','');
-INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('222','999','','');
+/*[BUGIFX]-DELETE-BEGIN by TCTNB(zhonglian.li), defect-8819408, 2020/01/16*/
+/*INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('222','999','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('222','08','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('222','118','','');
-INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('222','119','','');
+INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('222','119','','');*/
+/*[BUGIFX]-DELETE-END by TCTNB(zhonglian.li), defect-8819408, 2020/01/16*/
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('214','112','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('268','112','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('204','112','','');
@@ -187,14 +188,15 @@ INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('226','112','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('226','911','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('206','112','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('260','112','','');
-INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('260','911','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('231','911','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('231','112','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('214','911','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('208','911','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('208','112','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('334','112','','');
-INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('334','060','','');
+/*[BUGIFX]-DELETE-BEGIN by TCTNB(wenwen.cao), defect-9656513, 2020/07/22*/
+/*INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('334','060','','');*/
+/*[BUGIFX]-DELETE-END by TCTNB(wenwen.cao), defect-9656513, 2020/07/22*/
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('334','911','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('732','911','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('732','112','','');
@@ -215,8 +217,7 @@ INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('740','112','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('740','911','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('706','112','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('706','911','','');
-INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('704','112','','');
-INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('704','911','','');
+
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('710','112','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('710','911','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('714','112','','');
@@ -225,14 +226,16 @@ INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('748','112','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('748','911','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('734','112','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('734','911','','');
-INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('262','911','','');
+/*[BUGIFX]-Delete-Begin  by zhonglian.li NBTelCode for 8729135 on 2019/12/17*/
+/*INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('262','911','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('262','000','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('262','08','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('262','110','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('262','999','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('262','118','','');
 INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('262','119','','');
-INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('262','122','','');
+INSERT INTO qcril_emergency_source_hard_mcc_table VALUES('262','122','','');*/
+/*[BUGIFX]-Delete-End  by zhonglian.li NBTelCode for 8729135 on 2019/12/17*/
 CREATE TABLE qcril_emergency_source_nw_table(MCC TEXT, NUMBER TEXT, IMS_ADDRESS TEXT, SERVICE TEXT, PRIMARY KEY(MCC,NUMBER));
 CREATE TABLE qcril_emergency_source_escv_iin_table(IIN TEXT, NUMBER TEXT, ESCV INTEGER, ROAM TEXT, PRIMARY KEY(IIN,NUMBER,ROAM));
 CREATE TABLE qcril_emergency_source_escv_nw_table(MCC TEXT, MNC TEXT, NUMBER TEXT, ESCV INTEGER, PRIMARY KEY(MCC,NUMBER, ESCV));
@@ -267,16 +270,63 @@ INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('226','10','112','','');
 INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('226','10','911','','');
 INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('206','10','112','','');
 INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('260','03','112','','');
-INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('260','03','911','','');
 INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('231','01','911','','');
 INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('231','01','112','','');
 INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('214','03','112','','');
 INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('214','03','911','','');
 INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('208','01','911','','');
 INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('208','01','112','','');
-INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('334','020','060','','');
+/*[FEATURE]Begin add by wenwen.cao NBTelCode for Defect-9611287 on 2020/07/09 */
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('208','20','19','','');
+/*[FEATURE]End add by wenwen.cao NBTelCode for Defect-9611287 on 2020/07/09 */
+/*[FEATURE]Begin add by wenwen.cao NBTelCode for Defect-9810546 on 2020/08/25 */
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('234','15','110','','');
+/*[FEATURE]End add by wenwen.cao NBTelCode for Defect-9810546 on 2020/08/25 */
+
 INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('334','020','112','','');
 INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('334','020','911','','');
+/*[FEATURE]Begin add by wenwen.cao NBTelCode for Defect-9772729 on 2020/08/07*/
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('530','24','111','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('530','24','112','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('530','24','911','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('530','24','000','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('530','24','119','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('530','24','999','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('542','02','000','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('542','02','112','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('542','02','911','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('536','02','000','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('536','02','112','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('536','02','911','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('549','01','000','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('549','01','112','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('549','01','911','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('539','88','000','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('539','88','112','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('539','88','911','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('541','05','000','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('541','05','112','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('541','05','911','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('547','15','000','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('547','15','112','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('547','15','911','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('542','01','917','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('542','01','911','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('542','01','192','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('542','01','193','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('542','01','194','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('542','01','195','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('542','01','188','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('542','01','199','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('547','20','117','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('547','20','911','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('547','20','112','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('547','20','100','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('547','20','101','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('547','20','102','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('547','20','118','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('547','20','113','','');
+/*[FEATURE]End add by wenwen.cao NBTelCode for Defect-9772729 on 2020/08/07*/
 INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('732','101','112','','');
 INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('732','101','911','','');
 INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('716','10','112','','');
@@ -437,6 +487,23 @@ INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('405','874','100','','')
 INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('405','874','101','','');
 INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('405','874','102','','');
 INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('405','874','108','','');
+
+/* Rapid Phones FCM Customisation requirements for Emergency Number Setup end by qin dongxu,defect:9908922,time:2020/12/22 */
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('537','01','000','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('537','01','911','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('537','01','112','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('537','02','000','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('537','02','911','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('537','02','112','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('537','03','000','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('537','03','911','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('537','03','112','','');
+/* Rapid Phones FCM Customisation requirements for Emergency Number Setup end by qin dongxu,defect:9908922,time:2020/12/22 */
+
+/*[FEATURE]Begin add by zhonglian.li NBTelCode for 8954563 on 2020/02/26 */
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('505','03','000','','');
+INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('505','06','000','','');
+/*[FEATURE]End add by zhonglian.li NBTelCode for 8954563 on 2020/02/26 */
 CREATE TABLE qcril_emergency_source_voice_mcc_mnc_table(MCC TEXT, MNC TEXT, NUMBER TEXT, IMS_ADDRESS TEXT, SERVICE TEXT, PRIMARY KEY(MCC,NUMBER,MNC));
 INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('405','840','100','','full');
 INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('405','840','101','','full');
@@ -526,6 +593,8 @@ INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('405','874','100',
 INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('405','874','101','','full');
 INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('405','874','102','','full');
 INSERT INTO qcril_emergency_source_voice_mcc_mnc_table VALUES('405','874','108','','full');
+
+
 CREATE TABLE qcril_properties_table (property TEXT,value TEXT, PRIMARY KEY(property));
 INSERT INTO qcril_properties_table VALUES('qcrildb_version','5');
 CREATE TABLE qcril_operator_specific_config(MCC TEXT, MNC TEXT, WPS_OVER_CS INTEGER, PRIMARY KEY(MCC, MNC));
@@ -714,3 +783,4 @@ DELETE FROM qcril_emergency_source_voice_mcc_mnc_table where MCC = '405' AND MNC
 DELETE FROM qcril_emergency_source_voice_mcc_mnc_table where MCC = '405' AND MNC = '874' AND NUMBER = '102';
 DELETE FROM qcril_emergency_source_voice_mcc_mnc_table where MCC = '405' AND MNC = '874' AND NUMBER = '108';
 COMMIT;
+
